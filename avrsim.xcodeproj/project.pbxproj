@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4975257F13BE3A1E00909F66 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4975257E13BE3A1E00909F66 /* Cocoa.framework */; };
+		4975258913BE3A1E00909F66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4975258713BE3A1E00909F66 /* InfoPlist.strings */; };
+		4975258B13BE3A1E00909F66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4975258A13BE3A1E00909F66 /* main.m */; };
+		4975258F13BE3A1E00909F66 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4975258D13BE3A1E00909F66 /* Credits.rtf */; };
+		4975259213BE3A1E00909F66 /* avrsimAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4975259113BE3A1E00909F66 /* avrsimAppDelegate.m */; };
+		4975259513BE3A1E00909F66 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4975259313BE3A1E00909F66 /* MainMenu.xib */; };
+		4975259813BE3A1E00909F66 /* avrsim.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4975259613BE3A1E00909F66 /* avrsim.xcdatamodeld */; };
+		497525A013BE3A1E00909F66 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4975259F13BE3A1E00909F66 /* SenTestingKit.framework */; };
+		497525A113BE3A1E00909F66 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4975257E13BE3A1E00909F66 /* Cocoa.framework */; };
+		497525A913BE3A1F00909F66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 497525A713BE3A1F00909F66 /* InfoPlist.strings */; };
+		497525AB13BE3A1F00909F66 /* avrsimTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 497525AA13BE3A1F00909F66 /* avrsimTests.h */; };
+		497525AD13BE3A1F00909F66 /* avrsimTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 497525AC13BE3A1F00909F66 /* avrsimTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		497525A213BE3A1E00909F66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4975257113BE3A1E00909F66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4975257913BE3A1E00909F66;
+			remoteInfo = avrsim;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4975257A13BE3A1E00909F66 /* avrsim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = avrsim.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4975257E13BE3A1E00909F66 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		4975258113BE3A1E00909F66 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		4975258213BE3A1E00909F66 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4975258313BE3A1E00909F66 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4975258613BE3A1E00909F66 /* avrsim-Info.plist */ = {isa = PBXFileReference; path = "avrsim-Info.plist"; sourceTree = "<group>"; };
+		4975258813BE3A1E00909F66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4975258A13BE3A1E00909F66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4975258C13BE3A1E00909F66 /* avrsim-Prefix.pch */ = {isa = PBXFileReference; path = "avrsim-Prefix.pch"; sourceTree = "<group>"; };
+		4975258E13BE3A1E00909F66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		4975259013BE3A1E00909F66 /* avrsimAppDelegate.h */ = {isa = PBXFileReference; path = avrsimAppDelegate.h; sourceTree = "<group>"; };
+		4975259113BE3A1E00909F66 /* avrsimAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = avrsimAppDelegate.m; sourceTree = "<group>"; };
+		4975259413BE3A1E00909F66 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		4975259713BE3A1E00909F66 /* avrsim.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = avrsim.xcdatamodel; sourceTree = "<group>"; };
+		4975259E13BE3A1E00909F66 /* avrsimTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = avrsimTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4975259F13BE3A1E00909F66 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		497525A613BE3A1E00909F66 /* avrsimTests-Info.plist */ = {isa = PBXFileReference; path = "avrsimTests-Info.plist"; sourceTree = "<group>"; };
+		497525A813BE3A1F00909F66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		497525AA13BE3A1F00909F66 /* avrsimTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avrsimTests.h; sourceTree = "<group>"; };
+		497525AC13BE3A1F00909F66 /* avrsimTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = avrsimTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4975257713BE3A1E00909F66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4975257F13BE3A1E00909F66 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4975259A13BE3A1E00909F66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				497525A013BE3A1E00909F66 /* SenTestingKit.framework in Frameworks */,
+				497525A113BE3A1E00909F66 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4975256F13BE3A1E00909F66 = {
+			isa = PBXGroup;
+			children = (
+				4975258413BE3A1E00909F66 /* avrsim */,
+				497525A413BE3A1E00909F66 /* avrsimTests */,
+				4975257D13BE3A1E00909F66 /* Frameworks */,
+				4975257B13BE3A1E00909F66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4975257B13BE3A1E00909F66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4975257A13BE3A1E00909F66 /* avrsim.app */,
+				4975259E13BE3A1E00909F66 /* avrsimTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4975257D13BE3A1E00909F66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4975257E13BE3A1E00909F66 /* Cocoa.framework */,
+				4975259F13BE3A1E00909F66 /* SenTestingKit.framework */,
+				4975258013BE3A1E00909F66 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4975258013BE3A1E00909F66 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4975258113BE3A1E00909F66 /* AppKit.framework */,
+				4975258213BE3A1E00909F66 /* CoreData.framework */,
+				4975258313BE3A1E00909F66 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		4975258413BE3A1E00909F66 /* avrsim */ = {
+			isa = PBXGroup;
+			children = (
+				4975259013BE3A1E00909F66 /* avrsimAppDelegate.h */,
+				4975259113BE3A1E00909F66 /* avrsimAppDelegate.m */,
+				4975259313BE3A1E00909F66 /* MainMenu.xib */,
+				4975259613BE3A1E00909F66 /* avrsim.xcdatamodeld */,
+				4975258513BE3A1E00909F66 /* Supporting Files */,
+			);
+			path = avrsim;
+			sourceTree = "<group>";
+		};
+		4975258513BE3A1E00909F66 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4975258613BE3A1E00909F66 /* avrsim-Info.plist */,
+				4975258713BE3A1E00909F66 /* InfoPlist.strings */,
+				4975258A13BE3A1E00909F66 /* main.m */,
+				4975258C13BE3A1E00909F66 /* avrsim-Prefix.pch */,
+				4975258D13BE3A1E00909F66 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		497525A413BE3A1E00909F66 /* avrsimTests */ = {
+			isa = PBXGroup;
+			children = (
+				497525AA13BE3A1F00909F66 /* avrsimTests.h */,
+				497525AC13BE3A1F00909F66 /* avrsimTests.m */,
+				497525A513BE3A1E00909F66 /* Supporting Files */,
+			);
+			path = avrsimTests;
+			sourceTree = "<group>";
+		};
+		497525A513BE3A1E00909F66 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				497525A613BE3A1E00909F66 /* avrsimTests-Info.plist */,
+				497525A713BE3A1F00909F66 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4975257913BE3A1E00909F66 /* avrsim */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 497525B013BE3A1F00909F66 /* Build configuration list for PBXNativeTarget "avrsim" */;
+			buildPhases = (
+				4975257613BE3A1E00909F66 /* Sources */,
+				4975257713BE3A1E00909F66 /* Frameworks */,
+				4975257813BE3A1E00909F66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = avrsim;
+			productName = avrsim;
+			productReference = 4975257A13BE3A1E00909F66 /* avrsim.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4975259D13BE3A1E00909F66 /* avrsimTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 497525B313BE3A1F00909F66 /* Build configuration list for PBXNativeTarget "avrsimTests" */;
+			buildPhases = (
+				4975259913BE3A1E00909F66 /* Sources */,
+				4975259A13BE3A1E00909F66 /* Frameworks */,
+				4975259B13BE3A1E00909F66 /* Resources */,
+				4975259C13BE3A1E00909F66 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				497525A313BE3A1E00909F66 /* PBXTargetDependency */,
+			);
+			name = avrsimTests;
+			productName = avrsimTests;
+			productReference = 4975259E13BE3A1E00909F66 /* avrsimTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4975257113BE3A1E00909F66 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4975257413BE3A1E00909F66 /* Build configuration list for PBXProject "avrsim" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4975256F13BE3A1E00909F66;
+			productRefGroup = 4975257B13BE3A1E00909F66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4975257913BE3A1E00909F66 /* avrsim */,
+				4975259D13BE3A1E00909F66 /* avrsimTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4975257813BE3A1E00909F66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4975258913BE3A1E00909F66 /* InfoPlist.strings in Resources */,
+				4975258F13BE3A1E00909F66 /* Credits.rtf in Resources */,
+				4975259513BE3A1E00909F66 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4975259B13BE3A1E00909F66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				497525A913BE3A1F00909F66 /* InfoPlist.strings in Resources */,
+				497525AB13BE3A1F00909F66 /* avrsimTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4975259C13BE3A1E00909F66 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4975257613BE3A1E00909F66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4975258B13BE3A1E00909F66 /* main.m in Sources */,
+				4975259213BE3A1E00909F66 /* avrsimAppDelegate.m in Sources */,
+				4975259813BE3A1E00909F66 /* avrsim.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4975259913BE3A1E00909F66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				497525AD13BE3A1F00909F66 /* avrsimTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		497525A313BE3A1E00909F66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4975257913BE3A1E00909F66 /* avrsim */;
+			targetProxy = 497525A213BE3A1E00909F66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4975258713BE3A1E00909F66 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4975258813BE3A1E00909F66 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4975258D13BE3A1E00909F66 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4975258E13BE3A1E00909F66 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		4975259313BE3A1E00909F66 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4975259413BE3A1E00909F66 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		497525A713BE3A1F00909F66 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				497525A813BE3A1F00909F66 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		497525AE13BE3A1F00909F66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		497525AF13BE3A1F00909F66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		497525B113BE3A1F00909F66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "avrsim/avrsim-Prefix.pch";
+				INFOPLIST_FILE = "avrsim/avrsim-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		497525B213BE3A1F00909F66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "avrsim/avrsim-Prefix.pch";
+				INFOPLIST_FILE = "avrsim/avrsim-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		497525B413BE3A1F00909F66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/avrsim.app/Contents/MacOS/avrsim";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "avrsim/avrsim-Prefix.pch";
+				INFOPLIST_FILE = "avrsimTests/avrsimTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		497525B513BE3A1F00909F66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/avrsim.app/Contents/MacOS/avrsim";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "avrsim/avrsim-Prefix.pch";
+				INFOPLIST_FILE = "avrsimTests/avrsimTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4975257413BE3A1E00909F66 /* Build configuration list for PBXProject "avrsim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				497525AE13BE3A1F00909F66 /* Debug */,
+				497525AF13BE3A1F00909F66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		497525B013BE3A1F00909F66 /* Build configuration list for PBXNativeTarget "avrsim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				497525B113BE3A1F00909F66 /* Debug */,
+				497525B213BE3A1F00909F66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		497525B313BE3A1F00909F66 /* Build configuration list for PBXNativeTarget "avrsimTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				497525B413BE3A1F00909F66 /* Debug */,
+				497525B513BE3A1F00909F66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4975259613BE3A1E00909F66 /* avrsim.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4975259713BE3A1E00909F66 /* avrsim.xcdatamodel */,
+			);
+			currentVersion = 4975259713BE3A1E00909F66 /* avrsim.xcdatamodel */;
+			path = avrsim.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4975257113BE3A1E00909F66 /* Project object */;
+}
