@@ -219,7 +219,7 @@ void HWSpi::rxbit(const int bitpos) {
 void HWSpi::trxend() {
     if (finished) {
     finished=false;
-    if (core->trace_on && SPI_VERBOSE)
+    if (core->trace_on & SPI_VERBOSE)
         traceOut << "SPI: READ " << int(shift_in) << endl;
     /* set also data_write to allow continuous shifting
        when slave. */
@@ -238,7 +238,7 @@ unsigned int HWSpi::CpuCycle() {
     int bitpos=(spcr&DORD) ? bitcnt : 7-bitcnt;
     int bitpos_prec=(spcr&DORD) ? bitcnt-1 : 8-bitcnt;
     
-    if (core->trace_on && SPI_VERBOSE) {
+    if (core->trace_on & SPI_VERBOSE) {
         traceOut << "SPI: " << bitcnt << ", " << bitpos << ", " << clkcnt << endl;
     }
     
