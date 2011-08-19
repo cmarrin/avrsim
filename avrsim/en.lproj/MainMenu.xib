@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="7.10">
 	<data>
-		<int key="IBDocument.SystemTarget">1060</int>
-		<string key="IBDocument.SystemVersion">10J869</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1889</string>
-		<string key="IBDocument.AppKitVersion">1038.35</string>
-		<string key="IBDocument.HIToolboxVersion">461.00</string>
+		<int key="IBDocument.SystemTarget">1070</int>
+		<string key="IBDocument.SystemVersion">11C26</string>
+		<string key="IBDocument.InterfaceBuilderVersion">1923</string>
+		<string key="IBDocument.AppKitVersion">1138.11</string>
+		<string key="IBDocument.HIToolboxVersion">566.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
-			<string key="NS.object.0">1889</string>
+			<string key="NS.object.0">1923</string>
 		</object>
 		<object class="NSArray" key="IBDocument.IntegratedClassDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1333,6 +1333,7 @@
 				<string key="NSWindowTitle">avrsim</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<nil key="NSViewClass"/>
+				<nil key="NSUserInterfaceItemIdentifier"/>
 				<object class="NSView" key="NSWindowView" id="439893737">
 					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
@@ -1402,12 +1403,10 @@
 																								<reference key="NSWindow"/>
 																								<reference key="NSTableView" ref="546395978"/>
 																							</object>
-																							<object class="_NSCornerView" key="NSCornerView" id="427749002">
-																								<reference key="NSNextResponder" ref="641096833"/>
+																							<object class="_NSCornerView" key="NSCornerView">
+																								<nil key="NSNextResponder"/>
 																								<int key="NSvFlags">-2147483392</int>
 																								<string key="NSFrame">{{224, 0}, {16, 17}}</string>
-																								<reference key="NSSuperview" ref="641096833"/>
-																								<reference key="NSWindow"/>
 																							</object>
 																							<object class="NSMutableArray" key="NSTableColumns">
 																								<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1520,6 +1519,7 @@
 																							<int key="NSDraggingSourceMaskForNonLocal">0</int>
 																							<bool key="NSAllowsTypeSelect">YES</bool>
 																							<int key="NSTableViewDraggingDestinationStyle">0</int>
+																							<int key="NSTableViewGroupRowStyle">1</int>
 																						</object>
 																					</object>
 																					<string key="NSFrame">{{1, 17}, {265, 135}}</string>
@@ -1566,18 +1566,16 @@
 																					<reference key="NSBGColor" ref="97683278"/>
 																					<int key="NScvFlags">4</int>
 																				</object>
-																				<reference ref="427749002"/>
 																			</object>
 																			<string key="NSFrameSize">{267, 153}</string>
 																			<reference key="NSSuperview" ref="656246345"/>
 																			<reference key="NSWindow"/>
 																			<reference key="NSNextKeyView" ref="595106874"/>
-																			<int key="NSsFlags">562</int>
+																			<int key="NSsFlags">133682</int>
 																			<reference key="NSVScroller" ref="81749864"/>
 																			<reference key="NSHScroller" ref="731391825"/>
 																			<reference key="NSContentView" ref="595106874"/>
 																			<reference key="NSHeaderClipView" ref="1020110113"/>
-																			<reference key="NSCornerView" ref="427749002"/>
 																			<bytes key="NSScrollAmts">QSAAAEEgAABBmAAAQZgAAA</bytes>
 																		</object>
 																	</object>
@@ -1617,12 +1615,10 @@
 																								<reference key="NSWindow"/>
 																								<reference key="NSTableView" ref="175167827"/>
 																							</object>
-																							<object class="_NSCornerView" key="NSCornerView" id="966318419">
-																								<reference key="NSNextResponder" ref="191601273"/>
+																							<object class="_NSCornerView" key="NSCornerView">
+																								<nil key="NSNextResponder"/>
 																								<int key="NSvFlags">-2147483392</int>
 																								<string key="NSFrame">{{224, 0}, {16, 17}}</string>
-																								<reference key="NSSuperview" ref="191601273"/>
-																								<reference key="NSWindow"/>
 																							</object>
 																							<object class="NSMutableArray" key="NSTableColumns">
 																								<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1695,6 +1691,7 @@
 																							<int key="NSDraggingSourceMaskForNonLocal">0</int>
 																							<bool key="NSAllowsTypeSelect">YES</bool>
 																							<int key="NSTableViewDraggingDestinationStyle">0</int>
+																							<int key="NSTableViewGroupRowStyle">1</int>
 																						</object>
 																					</object>
 																					<string key="NSFrame">{{1, 17}, {232, 139}}</string>
@@ -1741,18 +1738,16 @@
 																					<reference key="NSBGColor" ref="97683278"/>
 																					<int key="NScvFlags">4</int>
 																				</object>
-																				<reference ref="966318419"/>
 																			</object>
 																			<string key="NSFrame">{{0, -4}, {234, 157}}</string>
 																			<reference key="NSSuperview" ref="537040800"/>
 																			<reference key="NSWindow"/>
 																			<reference key="NSNextKeyView" ref="472446241"/>
-																			<int key="NSsFlags">562</int>
+																			<int key="NSsFlags">133682</int>
 																			<reference key="NSVScroller" ref="311650631"/>
 																			<reference key="NSHScroller" ref="142235760"/>
 																			<reference key="NSContentView" ref="472446241"/>
 																			<reference key="NSHeaderClipView" ref="1021833685"/>
-																			<reference key="NSCornerView" ref="966318419"/>
 																			<bytes key="NSScrollAmts">QSAAAEEgAABBmAAAQZgAAA</bytes>
 																		</object>
 																	</object>
@@ -1788,7 +1783,6 @@
 															<string key="NSFrame">{{-7, -10}, {516, 218}}</string>
 															<reference key="NSSuperview" ref="1054449373"/>
 															<reference key="NSWindow"/>
-															<reference key="NSNextKeyView" ref="603068346"/>
 															<object class="NSMutableArray" key="NSTabViewItems">
 																<bool key="EncodedWithXMLCoder">YES</bool>
 																<object class="NSTabViewItem" id="185120971">
@@ -1811,7 +1805,7 @@
 																							<object class="NSTextView" id="716816334">
 																								<reference key="NSNextResponder" ref="170421356"/>
 																								<int key="NSvFlags">2322</int>
-																								<string key="NSFrameSize">{725, 203}</string>
+																								<string key="NSFrame">{{0, 74}, {725, 129}}</string>
 																								<reference key="NSSuperview" ref="170421356"/>
 																								<reference key="NSNextKeyView" ref="775758233"/>
 																								<object class="NSTextContainer" key="NSTextContainer" id="583318186">
@@ -1884,9 +1878,11 @@
 																										</object>
 																									</object>
 																									<nil key="NSDefaultParagraphStyle"/>
+																									<nil key="NSTextFinder"/>
+																									<int key="NSPreferredTextFinderStyle">1</int>
 																								</object>
 																								<int key="NSTVFlags">6</int>
-																								<string key="NSMaxSize">{725, 1e+07}</string>
+																								<string key="NSMaxSize">{725, 10000000}</string>
 																								<string key="NSMinize">{223, 129}</string>
 																								<nil key="NSDelegate"/>
 																							</object>
@@ -1950,7 +1946,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 																				<string key="NSFrame">{{-3, -3}, {742, 254}}</string>
 																				<reference key="NSSuperview" ref="180652359"/>
 																				<reference key="NSNextKeyView" ref="170421356"/>
-																				<int key="NSsFlags">18</int>
+																				<int key="NSsFlags">133138</int>
 																				<reference key="NSVScroller" ref="840780625"/>
 																				<reference key="NSHScroller" ref="775758233"/>
 																				<reference key="NSContentView" ref="170421356"/>
@@ -2010,7 +2006,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 																										<string>public.url</string>
 																									</object>
 																								</object>
-																								<string key="NSFrameSize">{485, 22}</string>
+																								<string key="NSFrameSize">{500, 14}</string>
 																								<reference key="NSSuperview" ref="938462903"/>
 																								<reference key="NSWindow"/>
 																								<reference key="NSNextKeyView" ref="334762256"/>
@@ -2030,7 +2026,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 																										<nil key="NSDelegate"/>
 																									</object>
 																									<reference key="NSTextView" ref="310601491"/>
-																									<double key="NSWidth">485</double>
+																									<double key="NSWidth">500</double>
 																									<int key="NSTCFlags">1</int>
 																								</object>
 																								<object class="NSTextViewSharedData" key="NSSharedData">
@@ -2068,14 +2064,16 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 																										</object>
 																									</object>
 																									<nil key="NSDefaultParagraphStyle"/>
+																									<nil key="NSTextFinder"/>
+																									<int key="NSPreferredTextFinderStyle">1</int>
 																								</object>
 																								<int key="NSTVFlags">6</int>
-																								<string key="NSMaxSize">{761, 1e+07}</string>
+																								<string key="NSMaxSize">{761, 10000000}</string>
 																								<string key="NSMinize">{223, 0}</string>
 																								<nil key="NSDelegate"/>
 																							</object>
 																						</object>
-																						<string key="NSFrame">{{1, 1}, {485, 170}}</string>
+																						<string key="NSFrame">{{1, 1}, {500, 170}}</string>
 																						<reference key="NSSuperview" ref="986143827"/>
 																						<reference key="NSWindow"/>
 																						<reference key="NSNextKeyView" ref="310601491"/>
@@ -2135,7 +2133,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 																				<reference key="NSSuperview" ref="603068346"/>
 																				<reference key="NSWindow"/>
 																				<reference key="NSNextKeyView" ref="938462903"/>
-																				<int key="NSsFlags">18</int>
+																				<int key="NSsFlags">133138</int>
 																				<reference key="NSVScroller" ref="440694734"/>
 																				<reference key="NSHScroller" ref="334762256"/>
 																				<reference key="NSContentView" ref="938462903"/>
@@ -2194,7 +2192,8 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					<reference key="NSWindow"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1920, 1178}}</string>
-				<string key="NSMaxSize">{1e+13, 1e+13}</string>
+				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
+				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
 			<object class="NSCustomObject" id="976324537">
 				<string key="NSClassName">avrsimAppDelegate</string>
@@ -2206,6 +2205,30 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
 			<object class="NSMutableArray" key="connectionRecords">
 				<bool key="EncodedWithXMLCoder">YES</bool>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">terminate:</string>
+						<reference key="source" ref="1050"/>
+						<reference key="destination" ref="632727374"/>
+					</object>
+					<int key="connectionID">449</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">orderFrontStandardAboutPanel:</string>
+						<reference key="source" ref="1021"/>
+						<reference key="destination" ref="238522557"/>
+					</object>
+					<int key="connectionID">142</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="1021"/>
+						<reference key="destination" ref="976324537"/>
+					</object>
+					<int key="connectionID">495</int>
+				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">performMiniaturize:</string>
@@ -2245,14 +2268,6 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 						<reference key="destination" ref="759406840"/>
 					</object>
 					<int key="connectionID">127</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">orderFrontStandardAboutPanel:</string>
-						<reference key="source" ref="1021"/>
-						<reference key="destination" ref="238522557"/>
-					</object>
-					<int key="connectionID">142</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -2496,46 +2511,6 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">addFontTrait:</string>
-						<reference key="source" ref="755631768"/>
-						<reference key="destination" ref="305399458"/>
-					</object>
-					<int key="connectionID">421</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">addFontTrait:</string>
-						<reference key="source" ref="755631768"/>
-						<reference key="destination" ref="814362025"/>
-					</object>
-					<int key="connectionID">422</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">modifyFont:</string>
-						<reference key="source" ref="755631768"/>
-						<reference key="destination" ref="885547335"/>
-					</object>
-					<int key="connectionID">423</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">orderFrontFontPanel:</string>
-						<reference key="source" ref="755631768"/>
-						<reference key="destination" ref="159677712"/>
-					</object>
-					<int key="connectionID">424</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">modifyFont:</string>
-						<reference key="source" ref="755631768"/>
-						<reference key="destination" ref="158063935"/>
-					</object>
-					<int key="connectionID">425</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
 						<string key="label">raiseBaseline:</string>
 						<reference key="source" ref="1014"/>
 						<reference key="destination" ref="941806246"/>
@@ -2664,14 +2639,6 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">terminate:</string>
-						<reference key="source" ref="1050"/>
-						<reference key="destination" ref="632727374"/>
-					</object>
-					<int key="connectionID">449</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
 						<string key="label">toggleAutomaticSpellingCorrection:</string>
 						<reference key="source" ref="1014"/>
 						<reference key="destination" ref="795346622"/>
@@ -2765,14 +2732,6 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 						<reference key="destination" ref="105068016"/>
 					</object>
 					<int key="connectionID">493</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">delegate</string>
-						<reference key="source" ref="1021"/>
-						<reference key="destination" ref="976324537"/>
-					</object>
-					<int key="connectionID">495</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -2877,6 +2836,46 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 						<reference key="destination" ref="560145579"/>
 					</object>
 					<int key="connectionID">530</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">addFontTrait:</string>
+						<reference key="source" ref="755631768"/>
+						<reference key="destination" ref="305399458"/>
+					</object>
+					<int key="connectionID">421</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">addFontTrait:</string>
+						<reference key="source" ref="755631768"/>
+						<reference key="destination" ref="814362025"/>
+					</object>
+					<int key="connectionID">422</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">modifyFont:</string>
+						<reference key="source" ref="755631768"/>
+						<reference key="destination" ref="885547335"/>
+					</object>
+					<int key="connectionID">423</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">orderFrontFontPanel:</string>
+						<reference key="source" ref="755631768"/>
+						<reference key="destination" ref="159677712"/>
+					</object>
+					<int key="connectionID">424</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">modifyFont:</string>
+						<reference key="source" ref="755631768"/>
+						<reference key="destination" ref="158063935"/>
+					</object>
+					<int key="connectionID">425</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
