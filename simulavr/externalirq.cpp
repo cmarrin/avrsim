@@ -131,10 +131,10 @@ unsigned char ExternalIRQHandler::set_from_reg(const IOSpecialReg* reg, unsigned
 unsigned char ExternalIRQHandler::get_from_client(const IOSpecialReg* reg, unsigned char v) {
     if(reg == mask_reg)
         // mask register
-        v = v & ~reg_mask | irq_mask;
+        v = (v & ~reg_mask) | irq_mask;
     else
         // flag register
-        v = v & ~reg_mask | irq_flag;
+        v = (v & ~reg_mask) | irq_flag;
     return v;
 }
 
