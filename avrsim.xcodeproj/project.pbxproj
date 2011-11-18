@@ -71,7 +71,6 @@
 		4975258913BE3A1E00909F66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4975258713BE3A1E00909F66 /* InfoPlist.strings */; };
 		4975258B13BE3A1E00909F66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4975258A13BE3A1E00909F66 /* main.m */; };
 		4975258F13BE3A1E00909F66 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4975258D13BE3A1E00909F66 /* Credits.rtf */; };
-		4975259213BE3A1E00909F66 /* avrsimAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4975259113BE3A1E00909F66 /* avrsimAppDelegate.m */; };
 		4975259513BE3A1E00909F66 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4975259313BE3A1E00909F66 /* MainMenu.xib */; };
 		4975259813BE3A1E00909F66 /* avrsim.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4975259613BE3A1E00909F66 /* avrsim.xcdatamodeld */; };
 		497525A013BE3A1E00909F66 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4975259F13BE3A1E00909F66 /* SenTestingKit.framework */; };
@@ -79,6 +78,7 @@
 		497525A913BE3A1F00909F66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 497525A713BE3A1F00909F66 /* InfoPlist.strings */; };
 		497525AB13BE3A1F00909F66 /* avrsimTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 497525AA13BE3A1F00909F66 /* avrsimTests.h */; };
 		497525AD13BE3A1F00909F66 /* avrsimTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 497525AC13BE3A1F00909F66 /* avrsimTests.m */; };
+		49C6609514757EC40096982C /* avrsimAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 49C6609414757EC40096982C /* avrsimAppDelegate.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -235,7 +235,6 @@
 		4975258C13BE3A1E00909F66 /* avrsim-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "avrsim-Prefix.pch"; sourceTree = "<group>"; };
 		4975258E13BE3A1E00909F66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		4975259013BE3A1E00909F66 /* avrsimAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avrsimAppDelegate.h; sourceTree = "<group>"; };
-		4975259113BE3A1E00909F66 /* avrsimAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = avrsimAppDelegate.m; sourceTree = "<group>"; };
 		4975259413BE3A1E00909F66 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		4975259713BE3A1E00909F66 /* avrsim.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = avrsim.xcdatamodel; sourceTree = "<group>"; };
 		4975259E13BE3A1E00909F66 /* avrsimTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = avrsimTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,6 +243,8 @@
 		497525A813BE3A1F00909F66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		497525AA13BE3A1F00909F66 /* avrsimTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avrsimTests.h; sourceTree = "<group>"; };
 		497525AC13BE3A1F00909F66 /* avrsimTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = avrsimTests.m; sourceTree = "<group>"; };
+		49C66091147574EB0096982C /* cpu.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = cpu.mm; sourceTree = "<group>"; };
+		49C6609414757EC40096982C /* avrsimAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = avrsimAppDelegate.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -354,8 +355,9 @@
 		4975258413BE3A1E00909F66 /* avrsim */ = {
 			isa = PBXGroup;
 			children = (
+				49C6609414757EC40096982C /* avrsimAppDelegate.mm */,
+				49C66091147574EB0096982C /* cpu.mm */,
 				4975259013BE3A1E00909F66 /* avrsimAppDelegate.h */,
-				4975259113BE3A1E00909F66 /* avrsimAppDelegate.m */,
 				4975259313BE3A1E00909F66 /* MainMenu.xib */,
 				4975259613BE3A1E00909F66 /* avrsim.xcdatamodeld */,
 				4975258513BE3A1E00909F66 /* Supporting Files */,
@@ -617,7 +619,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4975258B13BE3A1E00909F66 /* main.m in Sources */,
-				4975259213BE3A1E00909F66 /* avrsimAppDelegate.m in Sources */,
 				4975259813BE3A1E00909F66 /* avrsim.xcdatamodeld in Sources */,
 				49361C0D13BE4F7000796585 /* adcpin.cpp in Sources */,
 				49361C0E13BE4F7000796585 /* application.cpp in Sources */,
@@ -678,6 +679,7 @@
 				49361C4613BE4F7000796585 /* serialrx.cpp in Sources */,
 				49361C4713BE4F7000796585 /* serialtx.cpp in Sources */,
 				49361C4813BE4F7000796585 /* ui.cpp in Sources */,
+				49C6609514757EC40096982C /* avrsimAppDelegate.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
