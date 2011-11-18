@@ -21,8 +21,7 @@ public:
 
 StatusRegister sreg;
 
-template<int r, int d>
-int adc()
+static int adc(int r, int d)
 {
     reg8 rval = regs[r];
     reg8 dval = regs[d];
@@ -39,8 +38,9 @@ int adc()
     return 1;
 }
 
-template<int r, int d>
-int add()
+template<int r, int d> int adc() { return adc(r, d); }
+
+static int add(int r, int d)
 {
     reg8 rval = regs[r];
     reg8 dval = regs[d];
@@ -57,13 +57,23 @@ int add()
     return 1;
 }
 
-typedef void (*OpcodeFunction)();
+template<int r, int d> int add() { return add(r, d); }
 
-OpcodeFunction opcodes[6] = { NULL };
+typedef int (*OpcodeFunction)();
 
-static void foo()
+OpcodeFunction opcodes[6] = {
+    &adc<0, 0>,
+    &adc<0, 1>,
+    &adc<0, 2>,
+    &add<0, 0>,
+    &add<0, 1>,
+    &add<0, 2>
+};
+
+static void execOpcode()
 {
-    opcodes[0] = (OpcodeFunction) &adc<0, 0>;
+    int result = opcodes[0]();
+    result = opcodes[5]();
+    if (result) { }
 }
-
 
