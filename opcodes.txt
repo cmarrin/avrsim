@@ -1,52 +1,62 @@
-     000111rdddddrrrr   adc     r,r     sreg:H S V N Z C
-     000011rdddddrrrr   add     r,r     sreg:H S V N Z C
-     10010110KKddKKKK   adiw    w,K     sreg:S V N Z C
-     001000rdddddrrrr   and     r,r     sreg:S V N Z
-     0111KKKKddddKKKK   andi    d,M     sreg:S V N Z
-     1001010rrrrr0101   asr     r       sreg:S V N Z C
-     100101001SSS1000   bclr    S       sreg:I T H S V N Z C
-     1111100ddddd0sss   bld     r,s
-     111101lllllllsss   brbc    s,l
-     111100lllllllsss   brbs    s,l
-     111101lllllll000   brcc    l
-     111100lllllll000   brcs    l
+#
+# AVR Opcodes
+#
+# r:  8 bit reg specified by 'r' in opcode
+# d:  8 bit reg specified by 'd' in opcode
+# dd: 16 bit reg (upper 4 in register file) specified by 'd' in opcode
+# a:  8 bit result of operation
+# aa: 16 bit result of operation
+# K:  up to 16 bit constant in opcode
+
+     000111rdddddrrrr   adc     r,d     sreg:H=((d & r) | (r & ~a) | (~a & d)) & 0x08; V=((d & r & ~a) | (~d & ~r & a)) & 0x80; N=a & 0x80; Z=a == 0; C=((d & r) | (r & ~a) | (~a & d)) & 0x80; S=N ^ V;
+     000011rdddddrrrr   add     r,d     sreg:H=((d & r) | (r & ~a) | (~a & d)) & 0x08; V=((d & r & ~a) | (~d & ~r & a)) & 0x80; N=a & 0x80; Z=a == 0; C=((d & r) | (r & ~a) | (~a & d)) & 0x80; S=N ^ V;
+     10010110KKddKKKK   adiw    d,K     sreg:V=~dd & aa & 0x8000; N=aa & 0x8000; Z=aa == 0; C=aa & dd & 0x80; S=N ^ V;
+     001000rdddddrrrr   and     r,d     sreg:V=0; N=a & 0x80; Z=a == 0; S=N ^ V;
+     0111KKKKddddKKKK   andi    d,K     sreg:V=0; N=a & 0x80; Z=a == 0; S=N ^ V;
+     1001010ddddd0101   asr     d       sreg:N=a & 0x80; Z=a == 0; C=d & 0x01; V=N ^ C; S=N ^ V;
+     100101001sss1000   bclr    s       sreg:sreg &= ~(1 << s);
+     1111100ddddd0bbb   bld     d,b
+     111101kkkkkkksss   brbc    s,k
+     111100kkkkkkksss   brbs    s,k
+     111101kkkkkkk000   brcc    k
+     111100kkkkkkk000   brcs    k
      1001010110011000   break
-     111100lllllll001   breq    l
-     111101lllllll100   brge    l
-     111101lllllll101   brhc    l
-     111100lllllll101   brhs    l
-     111101lllllll111   brid    l
-     111100lllllll111   brie    l
-     111100lllllll000   brlo    l
-     111100lllllll100   brlt    l
-     111100lllllll010   brmi    l
-     111101lllllll001   brne    l
-     111101lllllll010   brpl    l
-     111101lllllll000   brsh    l
-     111101lllllll110   brtc    l
-     111100lllllll110   brts    l
-     111101lllllll011   brvc    l
-     111100lllllll011   brvs    l
-     100101000SSS1000   bset    S       sreg:I T H S V N Z C
-     1111101ddddd0sss   bst     r,s     sreg:T
-     1001010hhhhh111h   call    h
-     10011000pppppsss   cbi     p,s
-     0111KKKKddddKKKK   cbr     d,n     sreg:S V N Z
-     1001010010001000   clc             sreg:C
-     1001010011011000   clh             sreg:H
-     1001010011111000   cli             sreg:I
-     1001010010101000   cln             sreg:N
-     001001rdddddrrrr   clr     r       sreg:S V N Z
-     1001010011001000   cls             sreg:S
-     1001010011101000   clt             sreg:T
-     1001010010111000   clv             sreg:V
-     1001010010011000   clz             sreg:Z
-     1001010rrrrr0000   com     r       sreg:S V N Z C
-     000101rdddddrrrr   cp      r,r     sreg:H S V N Z C
-     000001rdddddrrrr   cpc     r,r     sreg:H S V N Z C
-     0011KKKKddddKKKK   cpi     d,M     sreg:H S V N Z C
-     000100rdddddrrrr   cpse    r,r
-     1001010rrrrr1010   dec     r       sreg:S V N Z
+     111100kkkkkkk001   breq    k
+     111101kkkkkkk100   brge    k
+     111101kkkkkkk101   brhc    k
+     111100kkkkkkk101   brhs    k
+     111101kkkkkkk111   brid    k
+     111100kkkkkkk111   brie    k
+     111100kkkkkkk000   brlo    k
+     111100kkkkkkk100   brlt    k
+     111100kkkkkkk010   brmi    k
+     111101kkkkkkk001   brne    k
+     111101kkkkkkk010   brpl    k
+     111101kkkkkkk000   brsh    k
+     111101kkkkkkk110   brtc    k
+     111100kkkkkkk110   brts    k
+     111101kkkkkkk011   brvc    k
+     111100kkkkkkk011   brvs    k
+     100101000sss1000   bset    s       sreg:sreg |= 1 << s;
+     1111101ddddd0bbb   bst     d,b     sreg:T=d & (1 << b);
+     1001010kkkkk111k   call    k
+     10011000AAAAAbbb   cbi     A,b
+     0111KKKKddddKKKK   cbr     d,K     sreg:V=0; N=a & 0x80; Z=a == 0; S=N ^ V;
+     1001010010001000   clc             sreg:C=0;
+     1001010011011000   clh             sreg:H=0;
+     1001010011111000   cli             sreg:I=0;
+     1001010010101000   cln             sreg:N=0;
+     001001dddddddddd   clr     d       sreg:S=0; V=0; N=0; Z=1;
+     1001010011001000   cls             sreg:S=0;
+     1001010011101000   clt             sreg:T=0;
+     1001010010111000   clv             sreg:V=0;
+     1001010010011000   clz             sreg:Z=0;
+     1001010ddddd0000   com     d       sreg:V=0; N=a & 0x80; Z=a == 0; C=1; S=N ^ V;
+     000101rdddddrrrr   cp      d,r     sreg:H=((~d & r) | (r & a) | (a & ~d)) & 0x08; V=((d & ~r & ~a) | (~d & r & a)) & 0x80; N=a & 0x80; Z=a == 0; C=((~d & r) | (r & a) | (a & ~d)) & 0x80; S=N ^ V;
+     000001rdddddrrrr   cpc     r,r     sreg:H=((~d & r) | (r & a) | (a & ~d)) & 0x08; V=((d & ~r & ~a) | (~d & r & a)) & 0x80; N=a & 0x80; Z=(a == 0) & Z; C=((~d & r) | (r & a) | (a & ~d)) & 0x80; S=N ^ V;
+     0011KKKKddddKKKK   cpi     d,K     sreg:H=((~d & K) | (K & a) | (a & ~d)) & 0x08; V=((d & ~K & ~a) | (~d & K & a)) & 0x80; N=a & 0x80; Z=a == 0; C=((~d & K) | (K & a) | (a & ~d)) & 0x80; S=N ^ V;
+     000100rdddddrrrr   cpse    d,r
+     1001010ddddd1010   dec     d       sreg:V=a == 0x7F; N=a & 0x80; Z=a == 0; S=N ^ V;
      10010100KKKK1011   des     K
      1001010100011001   eicall
      1001010000011001   eijmp
