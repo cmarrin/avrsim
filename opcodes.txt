@@ -6,6 +6,7 @@
 # dd: 16 bit reg (upper 4 in register file) specified by 'd' in opcode
 # a:  8 bit result of operation
 # aa: 16 bit result of operation
+# ax: high order bit (bit 16) of result in the fmul* calls
 # K:  up to 16 bit constant in opcode
 
      000111rdddddrrrr   adc     r,d     sreg:H=((d & r) | (r & ~a) | (~a & d)) & 0x08; V=((d & r & ~a) | (~d & ~r & a)) & 0x80; N=a & 0x80; Z=a == 0; C=((d & r) | (r & ~a) | (~a & d)) & 0x80; S=N ^ V;
@@ -61,16 +62,16 @@
      1001010100011001   eicall
      1001010000011001   eijmp
      1001010111011000   elpm    z
-     1001000ddddd0110   elpm    r,z
-     1001000ddddd0111   elpm    r,z+
-     001001rdddddrrrr   eor     r,r     sreg:S V N Z
-     000000110ddd1rrr   fmul    a,a     sreg:Z C
-     000000111ddd0rrr   fmuls   a,a     sreg:Z C
-     000000111ddd1rrr   fmulsu  a,a     sreg:Z C
+     1001000ddddd0110   elpm    d,z
+     1001000ddddd0111   elpm    d,z+
+     001001rdddddrrrr   eor     d,r     sreg:V=0; N=a & 0x80; Z=a == 0; S=N ^ V;
+     000000110ddd1rrr   fmul    a,a     sreg:Z=aa == 0; C=ax;
+     000000111ddd0rrr   fmuls   a,a     sreg:Z=aa == 0; C=ax;
+     000000111ddd1rrr   fmulsu  a,a     sreg:Z=aa == 0; C=ax;
      1001010100001001   icall
      1001010000001001   ijmp
-     10110PPdddddPPPP   in      r,P
-     1001010rrrrr0011   inc     r       sreg:S V N Z
+     10110AAdddddAAAA   in      d,A
+     1001010rrrrr0011   inc     r       sreg:V=a == 0x80; N=a & 0x80; Z=a == 0; S=N ^ V;
      1001010hhhhh110h   jmp     h
      1001001rrrrr0110   lac     r
      1001001rrrrr0101   las     r
@@ -121,15 +122,15 @@
      0110KKKKddddKKKK   sbr     d,M     sreg:S V N Z
      1111110rrrrr0sss   sbrc    r,s
      1111111rrrrr0sss   sbrs    r,s
-     1001010000001000   sec             sreg:C
-     1001010001011000   seh             sreg:H
-     1001010001111000   sei             sreg:I
-     1001010000101000   sen             sreg:N
+     1001010000001000   sec             sreg:C=1;
+     1001010001011000   seh             sreg:H=1;
+     1001010001111000   sei             sreg:I=1;
+     1001010000101000   sen             sreg:N=1;
      11101111dddd1111   ser     d       sreg:S V N Z
-     1001010001001000   ses             sreg:S
-     1001010001101000   set             sreg:T
-     1001010000111000   sev             sreg:V
-     1001010000011000   sez             sreg:Z
+     1001010001001000   ses             sreg:S=1;
+     1001010001101000   set             sreg:T=1;
+     1001010000111000   sev             sreg:V=1;
+     1001010000011000   sez             sreg:Z=1;
      1001010110001000   sleep
      1001010111101000   spm
      1001010111101000   spm#2
